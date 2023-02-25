@@ -16,9 +16,6 @@ class Student {
         this.fullName = firstName + " " + middleInitial + " " + lastName;
     }
 }
-function greeter(person) {
-    return `Hello, my name is ${person.firstName} ${person.lastName} and I'm ${person.age}. My hobbies are ${person.hobbies[0]} ${person.hobbies[1]} and ${person.hobbies[2]}`;
-}
 const user = {
     firstName: 'Radek',
     lastName: 'Siek',
@@ -26,8 +23,38 @@ const user = {
     isMarried: false,
     hobbies: ['fishig', 'hiking', 'guitar'],
 };
-document.body.textContent = greeter(user);
 function hello(person, date) {
     console.log(`Hi, ${person}! It's ${date.toDateString()}`);
 }
 hello('Emilia', new Date());
+function greet(name) {
+    console.log(`Hello, my name is ${name.charAt(0).toUpperCase() + name.slice(1)}`);
+}
+greet('emilia');
+function getFavoriteNumber() {
+    return 26;
+}
+const names = ['Alice', 'Bob', 'Ann'];
+names.forEach(function (s) {
+    console.log(s.toUpperCase());
+});
+names.forEach((s) => {
+    console.log(s.toLowerCase());
+});
+const radek = {
+    firstName: 'Radosław',
+    lastName: 'Siek',
+    age: 23
+};
+const { firstName: name, lastName: surname, age } = radek;
+const msg = `Hi! My name is ${name} ${surname} and I'm ${age}`;
+console.log(msg);
+function printId(id) {
+    if (typeof id === 'string') {
+        console.log(`Your ID is: ${id.charAt(0).toUpperCase() + id.slice(1)}`);
+    }
+    else {
+        console.log(`Your ID is: ${id}`);
+    }
+}
+printId('five');
