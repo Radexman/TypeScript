@@ -43,3 +43,9 @@ const user: Person = {
 }
 
 document.body.textContent = greeter(user);
+
+function hello(person: string, date: Date) {
+    console.log(`Hi, ${person}! It's ${date.toDateString()}`);
+}
+
+hello('Emilia', new Date());

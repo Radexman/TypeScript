@@ -27,3 +27,7 @@ const user = {
     hobbies: ['fishig', 'hiking', 'guitar'],
 };
 document.body.textContent = greeter(user);
+function hello(person, date) {
+    console.log(`Hi, ${person}! It's ${date.toDateString()}`);
+}
+hello('Emilia', new Date());
